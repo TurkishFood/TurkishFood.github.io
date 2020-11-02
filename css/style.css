@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,700;0,900;1,400;1,600;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',
+        sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 50px;
+    z-index: 9999;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.navbar .logo {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 600;
+
+}
+
+.navbar .logo span {
+    color: #EA2758;
+}
+
+.navbar ul {
+    display: flex;
+
+}
+
+.navbar ul li {
+    list-style: none;
+    margin-right: 15px;
+
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #fff;
+    transition: .3s;
+}
+
+.navbar ul li a:hover {
+    color: #EA2758;
+}
+
+.sticy {
+    padding: 20px 30px;
+    background-color: #fff;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.sticy .logo {
+    color: #111;
+}
+
+.sticy ul li a {
+    color: #111;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(/images/bg.jpg) no-repeat center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.header .header-title {
+    padding: 0 100px;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.header .header-title h1 {
+    font-size: 3em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.header .header-title p {
+    color: #fff;
+    margin: 20px 0 40px 0px;
+
+}
+
+.header .header-title a {}
+
+.btn {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    background: #EA2758;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    color: #fff;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.btn:hover {
+    letter-spacing: 1px;
+}
+
+
+.section-title {
+    font-size: 1.3em;
+    color: #111;
+
+
+}
+
+.section-title h1 span {
+    color: #EA2758;
+    font-size: 1.8em;
+}
+
+.About {
+    padding: 60px 40px;
+}
+
+.About .abouts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.abouts .about-item {
+    width: calc(50% - 20px);
+    padding: 20px 0 0 10px;
+}
+
+.About .abouts .about-item img {
+    padding: 100px 50px 50px 50px;
+    width: 100%;
+    height: 100%;
+}
+
+/* Menu */
+
+.menu {
+    padding: 60px 100px;
+    color: #111;
+    text-align: center;
+}
+
+.menu .menus {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.menu .menus .menu-item {
+    width: calc(33% - 20px);
+    height: 100%;
+    box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.menu .menus .menu-item:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+.menu .menus .menu-item img {
+    width: 100%;
+    padding: 10px;
+}
+
+.menu .menus .menu-item p {
+    padding: 10px;
+    float: left;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* Expert */
+.expert {
+    padding: 60px 100px;
+    color: #111;
+    text-align: center;
+}
+
+.experts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.experts .expert-item {
+    width: calc(25% - 20px);
+    margin-top: 20px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 30px 1px rgba(0, 0, 0, 0.2);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.experts .expert-item img {
+    width: 100%;
+}
