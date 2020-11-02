@@ -108,7 +108,7 @@
 
 }
 
-.header .header-title a {}
+
 
 .btn {
     text-decoration: none;
@@ -318,4 +318,128 @@
     color: #EA2758;
     text-decoration: none;
     text-transform: capitalize;
+}
+
+/* Contact Us */
+
+.contact {
+    padding: 40px 100px;
+    color: #fff;
+    text-align: center;
+    background: url(/images/bg3.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.contact .contact-box {
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.3);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.form-group input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #333;
+
+}
+
+.form-group textarea {
+    resize: vertical;
+    max-height: 100px;
+    min-height: 100px;
+}
+
+.form-group input[type="submit"] {
+    width: 50%;
+    background-color: #EA2758;
+    color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 2px 2px 20px 2px rgba(0, 0, 0, 0.3);
+    font-size: 17px;
+    align-items: right;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(14, 15, 26);
+    padding: 40px 60px;
+    color: #fff;
+    text-align: center;
+}
+
+footer .footer-social {
+    padding: 15px;
+
+}
+
+
+footer .footer-social a {
+    font-size: 27px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.footers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 15px;
+
+    text-align: left;
+}
+
+.footers .footer-item {
+    width: calc(33% - 20px);
+    position: relative;
+}
+
+.footers .footer-item .Footer-logo {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 2em;
+    color: rgba(221, 221, 221, 0.459);
+    text-decoration: none;
+}
+
+.footers .footer-item .site-map {
+    padding: 15px 0;
+}
+
+.footers .footer-item a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.footer-mail {
+    margin: 0;
+    position: relative;
+    align-items: center;
+    padding: 7px 15px;
+}
+
+.footer-mail::before {
+    content: "";
+    display: block;
+    z-index: 10000000;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
 }
