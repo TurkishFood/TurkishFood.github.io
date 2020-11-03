@@ -28,18 +28,25 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <!-- Header Start -->
     <div class="navbar">
       <a href="#" class="logo">Turkish Food<span>.</span></a>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Expert</a></li>
-        <li><a href="#">Testimonials</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <button class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="navbar-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About ME</a>
+        <a href="#menu">Menu</a>
+        <a href="#expert">Expert</a>
+
+        <a href="#testing">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </div>
     </div>
     <div class="header" id="home">
       <div class="header-title">
@@ -100,28 +107,40 @@
       </div>
       <div class="menus">
         <div class="menu-item">
-          <img src="/images/menu1.jpg" alt="" />
-          <p>Speacil Salat</p>
+          <a href="/images/menu1.jpg">
+            <img src="/images/menu1.jpg" alt="" />
+            <p>Speacil Salat</p>
+          </a>
         </div>
         <div class="menu-item">
-          <img src="/images/menu2.jpg" alt="" />
-          <p>Speacil Soob</p>
+          <a href="/images/menu2.jpg">
+            <img src="/images/menu2.jpg" alt="" />
+            <p>Speacil Soop</p>
+          </a>
         </div>
         <div class="menu-item">
-          <img src="/images/menu3.jpg" alt="" />
-          <p>Speacil pasta</p>
+          <a href="/images/menu3.jpg">
+            <img src="/images/menu3.jpg" alt="" />
+            <p>Speacil Pasta</p>
+          </a>
         </div>
         <div class="menu-item">
-          <img src="/images/menu4.jpg" alt="" />
-          <p>Speacil Chicked</p>
+          <a href="/images/menu4.jpg">
+            <img src="/images/menu4.jpg" alt="" />
+            <p>Speacil Salat</p>
+          </a>
         </div>
         <div class="menu-item">
-          <img src="/images/menu5.jpg" alt="" />
-          <p>Speacil Salat</p>
+          <a href="/images/menu5.jpg">
+            <img src="/images/menu5.jpg" alt="" />
+            <p>Speacil Salat</p>
+          </a>
         </div>
         <div class="menu-item">
-          <img src="/images/menu6.jpg" alt="" />
-          <p>Speacil Salat</p>
+          <a href="/images/menu6.jpg">
+            <img src="/images/menu6.jpg" alt="" />
+            <p>Speacil Salat</p>
+          </a>
         </div>
       </div>
       <a href="#" class="btn">View Menu</a>
@@ -252,12 +271,16 @@
             class="footer-mail"
             placeholder="Pleace send Mail"
           />
+          <input type="submit" value="Send" />
         </div>
       </div>
     </footer>
     <!-- Footer End -->
 
     <!-- Copyright Start -->
+    <div class="copyright">
+      <p>Copyright 2020 Creating By <a href="#">Veysel Güneş</a></p>
+    </div>
     <!-- Copyright End -->
     <script language="JavaScript" type="text/javascript">
       $(document).ready(function () {
@@ -267,6 +290,16 @@
           } else {
             $(".navbar").removeClass("sticy");
           }
+        });
+        $(".menu-toggle").click(function () {
+          $(this).toggleClass("active");
+          $(".navbar-menu").toggleClass("active");
+        });
+
+        $(".menus").magnificPopup({
+          delegate: "a",
+          type: "image",
+          gallery: { enabled: true },
         });
       });
     </script>

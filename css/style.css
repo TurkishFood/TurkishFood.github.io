@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins',
         sans-serif;
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -57,8 +58,14 @@
     transition: .3s;
 }
 
-.navbar ul li a:hover {
+.navbar .navbar-menu a:hover {
     color: #EA2758;
+}
+
+.navbar-menu a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 15px;
 }
 
 .sticy {
@@ -77,6 +84,29 @@
 
 .sticy ul li a {
     color: #111;
+}
+
+.sticy .navbar-menu a {
+    color: #111;
+}
+
+.menu-toggle {
+    background-color: transparent;
+    border: none;
+    display: none;
+    z-index: 99999;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 30px;
+    height: 1px;
+    color: #111;
+    background-color: #111;
+    margin-bottom: 8px;
+    position: relative;
+
+
 }
 
 .header {
@@ -164,6 +194,34 @@
     padding: 100px 50px 50px 50px;
     width: 100%;
     height: 100%;
+    animation: anime 10s infinite;
+    -webkit-animation: anime 3s infinite;
+}
+
+@keyframes anime {
+    0% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        -webkit-transform: translateY(-10px);
+        -moz-transform: translateY(-10px);
+        -ms-transform: translateY(-10px);
+        -o-transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
 }
 
 /* Menu */
@@ -210,6 +268,7 @@
 .menu .menus .menu-item img {
     width: 100%;
     padding: 10px;
+
 }
 
 .menu .menus .menu-item p {
@@ -429,17 +488,241 @@ footer .footer-social a {
     position: relative;
     align-items: center;
     padding: 7px 15px;
+    width: 70%;
+    margin-top: 20%;
 }
 
-.footer-mail::before {
-    content: "";
-    display: block;
-    z-index: 10000000;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100px;
-    height: 100px;
-    background-color: red;
 
+input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #EA2758;
+    border: none;
+    outline: none;
+    color: #fff;
+    width: 20%;
+    cursor: pointer;
+
+}
+
+@media(max-width:900px) {
+    .abouts .about-item {
+        width: 100%;
+    }
+
+    .navbar {
+
+        padding: 40px 20px;
+        z-index: 9999;
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+        display: flex;
+        justify-content: space-between;
+
+
+    }
+
+    .sticy {
+        padding: 15px;
+    }
+
+    .menu {
+        padding: 60px 40px;
+    }
+
+    .expert {
+        padding: 60px 40px;
+    }
+
+    .testing {
+        padding: 60px 40px;
+    }
+
+    .experts .expert-item {
+        width: calc(50% - 20px);
+    }
+
+    .textings .test {
+        width: calc(50% - 20px);
+        margin-bottom: 15px;
+    }
+
+    .contact {
+        padding: 60px 40px;
+    }
+
+    .contact .contact-box {
+        width: 50%;
+    }
+
+    .footers .footer-item {
+        width: 100%;
+    }
+}
+
+@media(max-width:780px) {
+    .menu-toggle {
+        display: block;
+        outline: none;
+        border: none;
+
+    }
+
+    .navbar-menu {
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        background-color: #ffffff;
+        top: 0;
+        right: -1100px;
+        max-width: 400px;
+        padding: 100px 25px;
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+    }
+
+    .navbar-menu a {
+        display: block;
+        margin-bottom: 15px;
+        padding: 0 15px;
+        color: #333;
+        font-size: 20px;
+
+    }
+
+    .navbar-menu.active {
+        right: 0;
+    }
+
+    .navbar .menu-toggle.active span {
+        transition: .5s;
+        -webkit-transition: .5s;
+        -moz-transition: .5s;
+        -ms-transition: .5s;
+        -o-transition: .5s;
+    }
+
+    .navbar .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+    }
+
+    .navbar .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        top: -18px;
+    }
+
+    .navbar .menu-toggle.active span:nth-child(2) {
+        transform: translatex(100px);
+        -webkit-transform: translatex(100px);
+        -moz-transform: translatex(100px);
+        -ms-transform: translatex(100px);
+        -o-transform: translatex(100px);
+    }
+
+    .header .header-title {
+        padding: 0 45px;
+    }
+
+    .menu {
+        padding: 60px 20px;
+    }
+
+    .menu .menus .menu-item {
+        width: calc(50% - 20px);
+    }
+
+    .expert {
+        padding: 60px 20px;
+    }
+
+    .testing {
+        padding: 60px 20px;
+    }
+
+    .experts .expert-item {
+        width: calc(50% - 20px);
+    }
+
+    .textings .test {
+        width: calc(50% - 20px);
+        margin-bottom: 15px;
+    }
+
+    .contact {
+        padding: 60px 40px;
+    }
+
+    .contact .contact-box {
+        width: 50%;
+    }
+
+    .footers .footer-item {
+        width: 100%;
+    }
+
+}
+
+@media(max-width:380px) {
+    .header .header-title {
+        padding: 0 35px;
+    }
+
+    .header .header-title h1 {
+        font-size: 2em;
+    }
+
+    .About {
+        padding: 10px 13px;
+    }
+
+    .About .abouts .about-item img {
+        padding: 05px;
+        margin: 0;
+    }
+
+    .menu {
+        padding: 40px 15px;
+    }
+
+    .menu .menus .menu-item {
+        width: 100%;
+    }
+
+    .expert {
+        padding: 40px 15px;
+    }
+
+    .testing {
+        padding: 40px 15px;
+    }
+
+    .experts .expert-item {
+        width: 100%;
+    }
+
+    .textings .test {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .contact {
+        padding: 40px 15px;
+    }
+
+    .contact .contact-box {
+        width: 100%;
+    }
 }
