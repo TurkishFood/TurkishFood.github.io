@@ -10,6 +10,7 @@
       src="js/script.js"
     ></script>
     <link rel="stylesheet" href="css/style.css" />
+    <script></script>
     <link
       rel="stylesheet"
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -40,7 +41,7 @@
       </button>
       <div class="navbar-menu">
         <a href="#home">Home</a>
-        <a href="#about">About ME</a>
+        <a href="/About.html">About ME</a>
         <a href="#menu">Menu</a>
         <a href="#expert">Expert</a>
 
@@ -281,15 +282,23 @@
     <div class="copyright">
       <p>Copyright 2020 Creating By <a href="#">Veysel Güneş</a></p>
     </div>
+
+    <button class="gotop fas fa-arrow-up"></button>
     <!-- Copyright End -->
-    <script language="JavaScript" type="text/javascript">
+
+    <script type="text/javascript">
       $(document).ready(function () {
         $(window).scroll(function () {
           if (this.scrollY > 10) {
             $(".navbar").addClass("sticy");
+            $(".gotop").fadeIn();
           } else {
             $(".navbar").removeClass("sticy");
+            $(".gotop").fadeOut();
           }
+        });
+        $(".gotop").click(function () {
+          scroll(0, 0);
         });
         $(".menu-toggle").click(function () {
           $(this).toggleClass("active");
@@ -299,7 +308,9 @@
         $(".menus").magnificPopup({
           delegate: "a",
           type: "image",
-          gallery: { enabled: true },
+          gallery: {
+            enabled: true,
+          },
         });
       });
     </script>

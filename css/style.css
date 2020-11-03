@@ -504,6 +504,24 @@ input[type="submit"] {
 
 }
 
+.gotop {
+    border: none;
+    outline: none;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background-color: #EA2758;
+    color: #fff;
+    padding: 15px;
+    font-size: 23px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    cursor: pointer;
+}
+
 @media(max-width:900px) {
     .abouts .about-item {
         width: 100%;
@@ -675,7 +693,7 @@ input[type="submit"] {
 
 }
 
-@media(max-width:380px) {
+@media(max-width:400px) {
     .header .header-title {
         padding: 0 35px;
     }
